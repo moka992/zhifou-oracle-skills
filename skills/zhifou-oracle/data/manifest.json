@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "source_pack": "Zhifou Fortune offline reference pack, separated 2026-10-19",
+  "zhouyi_source": "https://github.com/kanripo/KR1a0001",
+  "zhouyi_revision": "8284adbf9e3435d713180e24f05bf75f8b7d1d96",
+  "zhouyi_license": "CC-BY-SA-4.0",
+  "modern_summaries_and_answers_license": "MIT",
+  "sha256": {
+    "zhouyi.json": "41327dfd2ccd38b02d6e70bd2ab34dfac3bfff34547116e9e37e03d243ffbe64",
+    "tarot.json": "942b56b8b372c8e134fa3e0c2b0c1c32cf92fa47190e124d61a507c007897975",
+    "answers.json": "98d4f1b34e65b08025a8da861e3bd295b87fea2ffccd2ef9058c3e4a7c72b780"
+  }
+}

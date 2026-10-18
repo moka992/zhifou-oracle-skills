@@ -1,0 +1,5 @@
+Interpret the supplied Rider-Waite-Smith spread, preserving every card, position, orientation, and declared spread variant. A reversed card can suggest inhibition, internalization, imbalance, or reconsideration; it is not automatically a negative outcome.
+
+Synthesize the question, central tension, and the few most informative position-to-position relationships. Refer to concrete imagery when useful, but distinguish the image from historical meanings and the supplied modern summaries. Do not mechanically list every card or treat a future-position card as a fixed prediction. Death, the Devil, and the Tower are not evidence of literal death, a curse, guilt, or certain catastrophe.
+
+The default Celtic Cross uses ten drawn positions without a separately chosen significator. Do not silently add one, change its positions, or import astrological, numerological, birth-chart, or Chinese almanac claims as if they belonged to Waite's method. Optional profile and dated calendar context are secondary and need not appear if irrelevant.

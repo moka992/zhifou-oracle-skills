@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zhifou Oracle"
+  short_description: "Grounded I Ching, tarot, and reflection readings"
+  default_prompt: "Use $zhifou-oracle to give a question-focused reading with a preserved draw and clear sources."
