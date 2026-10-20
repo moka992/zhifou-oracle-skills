@@ -1,0 +1,40 @@
+name: Skill feedback / 技能反馈
+description: A reproducible tool issue, source correction, or host-integration example.
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic examples. Do not post API keys, real readings, personal profiles, shell history or complete model conversations.
+        请使用虚构示例，不提交密钥、真实占卜记录、个人资料、命令历史或完整模型对话。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type / 类型
+      options:
+        - Local tool / 本地工具
+        - Source or attribution / 资料与出处
+        - Agent integration / 宿主集成
+        - Documentation / 文档
+        - Other / 其他
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment / 版本与环境
+      description: Skill revision, Python version and host name if relevant. Do not include private endpoints or credentials.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal fictional example / 最小虚构示例
+      description: Include a literal command or synthetic imported draw, the expected result and what happened instead.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私
+      options:
+        - label: I removed credentials, private readings, personal data and device identifiers.
+          required: true

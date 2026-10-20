@@ -1,10 +1,12 @@
-<p align="center"><img src="docs/assets/cover.png" alt="Zhifou Oracle Skills: draw locally, interpret thoughtfully" width="100%"></p>
+<p align="center"><img src="docs/assets/social-preview.jpg" alt="Zhifou Oracle Skills: draw locally, interpret thoughtfully" width="100%"></p>
 
 # Zhifou Oracle Skills
 
 **I Ching and tarot for agents that should interpret the draw, not invent it.**
 
 [简体中文](README.zh-CN.md) · [Download Skill](https://github.com/moka992/zhifou-oracle-skills/releases/latest) · [Method & Sources](skills/zhifou-oracle/references/sources.md) · [Evaluation](evals/README.md)
+
+**See it work:** [run the no-key offline demo](#try-it-in-a-minute) · [follow a complete reading](docs/walkthrough.md) · [install in your agent](#install-the-skill)
 
 ![Offline checks](https://github.com/moka992/zhifou-oracle-skills/actions/workflows/test.yml/badge.svg)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB)
@@ -33,11 +35,21 @@ The point is better-grounded interpretation, not a claim that divination predict
 ```sh
 git clone https://github.com/moka992/zhifou-oracle-skills.git
 cd zhifou-oracle-skills
-python3 skills/zhifou-oracle/scripts/oracle.py tarot --spread three-card
-python3 skills/zhifou-oracle/scripts/oracle.py coin --lines 7,8,7,8,7,8
+python3 tools/demo.py
 ```
 
-The second command imports a fixed cast, rather than pretending it is a random draw. Omit `--lines` for a new cast. Each command prints a JSON reading and the relevant references, not an LLM-written answer. An agent supplies the interpretation after loading the skill.
+![Reproducible offline demo: imported casts, fixed cards, and consistency checks](docs/assets/offline-demo.svg)
+
+This fixed-input demo runs real tool code, verifies two imported readings, and rejects a deliberately altered orientation. It does not call an LLM, save a question, or simulate a random draw. [See the exact inputs and a complete example interpretation](docs/walkthrough.md). The illustration is rendered from the command output, not a model session.
+
+For a new draw or the full JSON references:
+
+```sh
+python3 skills/zhifou-oracle/scripts/oracle.py tarot --spread three-card
+python3 skills/zhifou-oracle/scripts/oracle.py coin
+```
+
+These commands return structured outcomes and references, not an LLM-written answer. Your agent supplies the interpretation after loading the skill.
 
 ```text
 Use $zhifou-oracle for a three-coin reading about a difficult work decision.

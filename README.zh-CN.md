@@ -1,10 +1,12 @@
-<p align="center"><img src="docs/assets/cover.png" alt="知否占卜技能：本地抽取，有据解读" width="100%"></p>
+<p align="center"><img src="docs/assets/social-preview.jpg" alt="知否占卜技能：本地抽取，有据解读" width="100%"></p>
 
 # 知否占卜 Agent Skill
 
 **让模型解读真实的抽取结果，而不是临场编造一个结果。**
 
 [English](README.md) · [下载 Skill](https://github.com/moka992/zhifou-oracle-skills/releases/latest) · [方法与出处](skills/zhifou-oracle/references/sources.md) · [验证说明](evals/README.md)
+
+**先看效果：**[无需 Key 的离线演示](#快速尝试) · [完整解读案例](docs/walkthrough.md#简体中文) · [安装到 Agent](#安装)
 
 一个可独立使用的 Agent Skill：铜钱卦、韦特塔罗、原创答案卡。本地程序负责抽取、计算和查找原文，模型负责理解问题与组织解读。工具只依赖 Python 标准库，不需要 API Key、服务器或额外 Python 包；宿主模型本身仍可能需要订阅或 API 费用。
 
@@ -29,12 +31,22 @@
 ```sh
 git clone https://github.com/moka992/zhifou-oracle-skills.git
 cd zhifou-oracle-skills
+python3 tools/demo.py --lang zh
+```
+
+![真实程序输出生成的可复现展示图：固定导入、校验和正逆位检查](docs/assets/offline-demo.svg)
+
+这个演示使用固定导入结果，实际运行本地工具，检查两份记录，并确认被改动的正逆位会被拒绝。它不调用模型、不保存问题，也不会把导入结果伪装成随机抽取。[完整案例](docs/walkthrough.md#简体中文)列出了输入、结果和一段明确标注的示范性解读，方便区分程序输出与模型负责的部分。图中为英文命令输出，不是模型对话截图。
+
+如果想进行新的随机抽取，或取得完整 JSON 与参考资料：
+
+```sh
 python3 skills/zhifou-oracle/scripts/oracle.py coin
 python3 skills/zhifou-oracle/scripts/oracle.py tarot --spread celtic-cross
 python3 skills/zhifou-oracle/scripts/oracle.py answer
 ```
 
-这些命令输出 JSON 结果与相关参考资料，不会自行调用模型。加载 Skill 后，Agent 再结合用户的问题进行解读。
+这些命令不会自行调用模型。加载 Skill 后，Agent 再结合用户的问题进行解读。
 
 ## 安装
 

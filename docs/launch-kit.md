@@ -2,6 +2,8 @@
 
 These are ready-to-adapt announcements, not records of posts already made. Publish only in relevant venues that accept this type of project. Lead with a reproducible example; do not mass-post, purchase engagement, or imply vendor endorsement.
 
+The current assets are a [no-key reproducible demo](../tools/demo.py), [complete English/Chinese case](walkthrough.md), and [rendered actual tool output](assets/offline-demo.svg). Read the [venue review and submission drafts](launch-channels.md) before choosing a destination. Some directories require existing adoption, and some communities prohibit AI-generated posts; those are not suitable places to paste generic launch copy.
+
 ## Short English Introduction
 
 **Zhifou Oracle Skills: I Ching and tarot where the agent interprets the draw instead of inventing it.**
@@ -30,3 +32,10 @@ https://github.com/moka992/zhifou-oracle-skills
 4. Show the privacy boundary and a meaningful limitation, not only a flattering answer.
 
 The original AI-generated cover is `assets/cover.png`, with its generation note in [asset notes](assets/README.md). The three historical card previews in the README come from the separately attributed RWS pack.
+
+## Asset and Tracking Checklist
+
+- Use `docs/assets/social-preview.jpg` as a compact link-preview image; it is a resized version of the attributed cover, not an application screenshot.
+- Regenerate `offline-demo.svg` with `python3 tools/render_demo.py`; do not hand-edit PASS lines or present the image as a hosted model result.
+- Keep owner-only traffic snapshots private. [The app repository's metrics tool](https://github.com/moka992/zhifou-fortune/blob/main/tools/repository_metrics.py) can read this repository with `--repo moka992/zhifou-oracle-skills`.
+- After an actual approved post, record its link privately and review real visits, downloads and actionable feedback. Do not count a prepared draft as a published announcement.
